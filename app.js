@@ -1,5 +1,3 @@
-
-    
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
 
@@ -13,55 +11,43 @@ export default function App() {
         placeholder="Search"
       />
       <Text style={styles.randomtext}>Categories</Text>
-      <ScrollView>
-      <View style={styles.exerciseContainer}>
-        <View style={styles.exercise}>
-          <TextInput
-            placeholder="EXERCISE"
-          />
-          <Text style={styles.taskText}>12 Tasks</Text>
+      <ScrollView vertical style={styles.ScrollView}>
+        <View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>EXERCISE</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.exerciseContainer}>
-        <View style={styles.exercise}>
-          <TextInput
-            placeholder="STUDY"
-          />
-          <Text style={styles.taskText}>12 Tasks</Text>
+        <View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>STUDY</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.exerciseContainer}>
-        <View style={styles.exercise}>
-          <TextInput
-            placeholder="PRAYER"
-          />
-          <Text style={styles.taskText}>12 Tasks</Text>
+        <View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>PRAYER</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.exerciseContainer}>
-        <View style={styles.exercise}>
-          <TextInput
-            placeholder="EATING"
-          />
-          <Text style={styles.taskText}>12 Tasks</Text>
+        <View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>EATING</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.exerciseContainer}>
-        <View style={styles.exercise}>
-          <TextInput
-            placeholder="OUTINGS"
-          />
-          <Text style={styles.taskText}>12 Tasks</Text>
+        <View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>OUTINGS</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.exerciseContainer}>
-        <View style={styles.exercise}>
-          <TextInput
-            placeholder="JOGGING"
-          />
-          <Text style={styles.taskText}>12 Tasks</Text>
+        <View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>JOGGING</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
         </View>
-      </View>
       </ScrollView>
       <StatusBar style="auto" />
     </View>
@@ -102,19 +88,25 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   exercise: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
     width: 150,
     height: 150,
     borderColor: 'black',
     borderWidth: 1,
     borderRadius: 5,
-    justifyContent: 'space-between', 
-    paddingHorizontal: 10,
+    padding: 10,
+    backgroundColor: '#FFF',
   },
- 
+  exerciseText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
   taskText: {
     fontSize: 16,
     color: 'gray',
+    marginTop: 10,
   },
 });
+
