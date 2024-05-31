@@ -1,3 +1,5 @@
+
+    
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
@@ -10,10 +12,11 @@ export default function App() {
         style={styles.textInput}
         placeholder="Search"
       />
-      <Text style={styles.randomtext}> Categories</Text>
+      <Text style={styles.randomtext}>Categories</Text>
       <TextInput
-        style={styles.Square}
+        style={styles.exercise} 
         placeholder="EXERCISE"
+        <Text>12 Tasks</Text>
       />
       <StatusBar style="auto" />
     </View>
@@ -28,7 +31,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingLeft: 20,
     paddingTop: 52,
-   
   },
   text: {
     textAlign: 'left',
@@ -45,14 +47,20 @@ const styles = StyleSheet.create({
     height: 49,
     borderColor: 'black',
     borderWidth: 1,
+    borderRadius: 5,
   },
-  randomtext:{
-    marginTop:25,
+  randomtext: {
+    marginTop: 25,
     fontSize: 25,
-  }
-  Square:{
-    height:15,
-    width:15,
-    borderRadius:5,
+  },
+  exercise: { 
+    marginTop: 10,
+    paddingLeft: 5,
+    width: 150, 
+    height: 150, 
+    borderColor: 'black',
+    borderWidth: 1,
+    borderRadius: 5,
+    textAlign:"center",
   }
 });
