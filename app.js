@@ -15,17 +15,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'flex-end',
-    justifyContent: 'left',
+    alignItems: 'flex-start', 
+    justifyContent: 'flex-start', 
+    paddingLeft: 20,
+    paddingTop: 20,
   },
   text: {
     textAlign: 'left',
-    fontSize: 40,
+    fontSize: 35,
   },
   smallText: {
     textAlign: 'left',
-    fontSize: 20,
+    fontSize: 15,
   },
+});
+
 });
 
 
