@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello, Dev!</Text>
       <Text style={styles.smallText}>14 tasks today</Text>
-      <Text style={styles.textbox}>Search</Text>
+      <TextInput
+        style={styles.textInput}
+        placeholder="Search"
+      />
+      <Text style={styles.randomtext}> Categories</Text>
+      <TextInput
+        style={styles.Square}
+        placeholder="EXERCISE"
+      />
       <StatusBar style="auto" />
     </View>
   );
@@ -15,11 +23,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'flex-start', 
-    justifyContent: 'flex-start', 
-    paddingLeft: 20, 
-    paddingTop: 50,
+    backgroundColor: '#FFFDD1',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    paddingLeft: 20,
+    paddingTop: 52,
+   
   },
   text: {
     textAlign: 'left',
@@ -29,9 +38,21 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 20,
   },
-  textbox:{
-    paddingTop:50,
+  textInput: {
+    marginTop: 50, 
     paddingLeft: 20,
+    width: 353,
+    height: 49,
+    borderColor: 'black',
+    borderWidth: 1,
+  },
+  randomtext:{
+    marginTop:25,
+    fontSize: 25,
+  }
+  Square:{
+    height:15,
+    width:15,
+    borderRadius:5,
   }
 });
-
