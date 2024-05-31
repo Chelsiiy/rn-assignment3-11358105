@@ -1,7 +1,7 @@
 
     
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
 
 export default function App() {
   return (
@@ -13,11 +13,56 @@ export default function App() {
         placeholder="Search"
       />
       <Text style={styles.randomtext}>Categories</Text>
-      <TextInput
-        style={styles.exercise} 
-        placeholder="EXERCISE"
-        <Text>12 Tasks</Text>
-      />
+      <ScrollView>
+      <View style={styles.exerciseContainer}>
+        <View style={styles.exercise}>
+          <TextInput
+            placeholder="EXERCISE"
+          />
+          <Text style={styles.taskText}>12 Tasks</Text>
+        </View>
+      </View>
+      <View style={styles.exerciseContainer}>
+        <View style={styles.exercise}>
+          <TextInput
+            placeholder="STUDY"
+          />
+          <Text style={styles.taskText}>12 Tasks</Text>
+        </View>
+      </View>
+      <View style={styles.exerciseContainer}>
+        <View style={styles.exercise}>
+          <TextInput
+            placeholder="PRAYER"
+          />
+          <Text style={styles.taskText}>12 Tasks</Text>
+        </View>
+      </View>
+      <View style={styles.exerciseContainer}>
+        <View style={styles.exercise}>
+          <TextInput
+            placeholder="EATING"
+          />
+          <Text style={styles.taskText}>12 Tasks</Text>
+        </View>
+      </View>
+      <View style={styles.exerciseContainer}>
+        <View style={styles.exercise}>
+          <TextInput
+            placeholder="OUTINGS"
+          />
+          <Text style={styles.taskText}>12 Tasks</Text>
+        </View>
+      </View>
+      <View style={styles.exerciseContainer}>
+        <View style={styles.exercise}>
+          <TextInput
+            placeholder="JOGGING"
+          />
+          <Text style={styles.taskText}>12 Tasks</Text>
+        </View>
+      </View>
+      </ScrollView>
       <StatusBar style="auto" />
     </View>
   );
@@ -53,14 +98,23 @@ const styles = StyleSheet.create({
     marginTop: 25,
     fontSize: 25,
   },
-  exercise: { 
+  exerciseContainer: {
     marginTop: 10,
-    paddingLeft: 5,
-    width: 150, 
-    height: 150, 
+  },
+  exercise: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: 150,
+    height: 150,
     borderColor: 'black',
     borderWidth: 1,
     borderRadius: 5,
-    textAlign:"center",
-  }
+    justifyContent: 'space-between', 
+    paddingHorizontal: 10,
+  },
+ 
+  taskText: {
+    fontSize: 16,
+    color: 'gray',
+  },
 });
