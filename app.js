@@ -6,6 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.text}>Hello, Dev!</Text>
       <Text style={styles.smallText}>14 tasks today</Text>
+      <Text style={styles.textbox}>Search</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -17,20 +18,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'flex-start', 
     justifyContent: 'flex-start', 
-    paddingLeft: 20,
-    paddingTop: 20,
+    paddingLeft: 20, 
+    paddingTop: 50,
   },
   text: {
     textAlign: 'left',
-    fontSize: 35,
+    fontSize: 40,
   },
   smallText: {
     textAlign: 'left',
-    fontSize: 15,
+    fontSize: 20,
   },
+  textbox:{
+    paddingTop:50,
+    paddingLeft: 20,
+  }
 });
-
-});
-
-
 
