@@ -11,7 +11,7 @@ export default function App() {
         placeholder="Search"
       />
       <Text style={styles.randomtext}>Categories</Text>
-      <ScrollView vertical style={styles.ScrollView}>
+      <ScrollView horizontal style={styles.scrollView}>
         <View style={styles.exerciseContainer}>
           <View style={styles.exercise}>
             <Text style={styles.exerciseText}>EXERCISE</Text>
@@ -26,29 +26,42 @@ export default function App() {
         </View>
         <View style={styles.exerciseContainer}>
           <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>PRAYER</Text>
+            <Text style={styles.exerciseText}>Classes</Text>
             <Text style={styles.taskText}>12 Tasks</Text>
           </View>
         </View>
         <View style={styles.exerciseContainer}>
           <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>EATING</Text>
+            <Text style={styles.exerciseText}>Production</Text>
             <Text style={styles.taskText}>12 Tasks</Text>
           </View>
         </View>
         <View style={styles.exerciseContainer}>
           <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>OUTINGS</Text>
+            <Text style={styles.exerciseText}>Prayer</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
+        </View><View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>Party</Text>
+            <Text style={styles.taskText}>12 Tasks</Text>
+          </View>
+          </View>
+          <View style={styles.exerciseContainer}>
+          <View style={styles.exercise}>
+            <Text style={styles.exerciseText}>Sports</Text>
             <Text style={styles.taskText}>12 Tasks</Text>
           </View>
         </View>
         <View style={styles.exerciseContainer}>
           <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>JOGGING</Text>
+            <Text style={styles.exerciseText}>Cooking</Text>
             <Text style={styles.taskText}>12 Tasks</Text>
           </View>
         </View>
+       
       </ScrollView>
+      <Text style={styles.randomtext}>Ongoing Activities</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -72,7 +85,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   textInput: {
-    marginTop: 50, 
+    marginTop: 50,
     paddingLeft: 20,
     width: 353,
     height: 49,
@@ -84,8 +97,12 @@ const styles = StyleSheet.create({
     marginTop: 25,
     fontSize: 25,
   },
+  scrollView: {
+    marginTop: 10,
+  },
   exerciseContainer: {
     marginTop: 10,
+    paddingRight:15,
   },
   exercise: {
     flexDirection: 'column',
@@ -98,15 +115,21 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     backgroundColor: '#FFF',
+    textAlign:"left",
   },
   exerciseText: {
     fontSize: 20,
     fontWeight: 'bold',
+    textAlign:"left",
   },
   taskText: {
     fontSize: 16,
-    color: 'gray',
+    color: 'black',
     marginTop: 10,
   },
+  taskCount: {
+    fontSize: 16,
+    color: 'black',
+    textAlign: 'center',
+  },
 });
-
