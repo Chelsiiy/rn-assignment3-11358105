@@ -3,7 +3,9 @@ import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
 
 export default function App() {
   return (
+    
     <View style={styles.container}>
+      <scrollview vertical style={styles.scrollview}>
       <Text style={styles.text}>Hello, Dev!</Text>
       <Text style={styles.smallText}>14 tasks today</Text>
       <TextInput
@@ -63,6 +65,7 @@ export default function App() {
       </ScrollView>
       <Text style={styles.randomtext}>Ongoing Activities</Text>
       <StatusBar style="auto" />
+      </scrollview>
     </View>
   );
 }
