@@ -1,71 +1,97 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, TextInput, ScrollView, FlatList } from 'react-native';
 
 export default function App() {
+  const activities = [
+    { key: '1', activity: 'Sports' },
+    { key: '2', activity: 'Laundry' },
+    { key: '3', activity: 'Classes' },
+    { key: '4', activity: 'Cell meeting' },
+    { key: '5', activity: 'Jogging' },
+    { key: '6', activity: 'cooking' },
+    { key: '7', activity: 'Archery' },
+    { key: '8', activity: 'Gaming' },
+    { key: '9', activity: 'Planting' },
+    { key: '10', activity: 'Cleaning' },
+    { key: '11', activity: 'Studying' },
+    { key: '12', activity: 'Playing' },
+    { key: '13', activity: 'Sleeping' },
+    { key: '14', activity: 'Golfing' },
+    { key: '15', activity: 'Watching movies' },
+  ];
+
   return (
-    
     <View style={styles.container}>
-      <scrollview vertical style={styles.scrollview}>
-      <Text style={styles.text}>Hello, Dev!</Text>
-      <Text style={styles.smallText}>14 tasks today</Text>
-      <TextInput
-        style={styles.textInput}
-        placeholder="Search"
-      />
-      <Text style={styles.randomtext}>Categories</Text>
-      <ScrollView horizontal style={styles.scrollView}>
-        <View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>EXERCISE</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
-          </View>
-        </View>
-        <View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>STUDY</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
-          </View>
-        </View>
-        <View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>Classes</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
-          </View>
-        </View>
-        <View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>Production</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
-          </View>
-        </View>
-        <View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>Prayer</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
-          </View>
-        </View><View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>Party</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
-          </View>
+      <ScrollView vertical style={styles.scrollView}>
+        <Text style={styles.text}>Hello, Dev!</Text>
+        <Text style={styles.smallText}>14 tasks today</Text>
+        <TextInput
+          style={styles.textInput}
+          placeholder="Search"
+        />
+        <Text style={styles.randomtext}>Categories</Text>
+        <ScrollView horizontal style={styles.horizontalScrollView}>
+          <View style={styles.exerciseContainer}>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>EXERCISE</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
           </View>
           <View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>Sports</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>STUDY</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
           </View>
-        </View>
-        <View style={styles.exerciseContainer}>
-          <View style={styles.exercise}>
-            <Text style={styles.exerciseText}>Cooking</Text>
-            <Text style={styles.taskText}>12 Tasks</Text>
+          <View style={styles.exerciseContainer}>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>Classes</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
           </View>
-        </View>
-       
+          <View style={styles.exerciseContainer}>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>Production</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
+          </View>
+          <View style={styles.exerciseContainer}>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>Prayer</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
+          </View>
+          <View style={styles.exerciseContainer}>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>Party</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
+          </View>
+          <View style={styles.exerciseContainer}>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>Sports</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
+          </View>
+          <View style={styles.exerciseContainer}>
+            <View style={styles.exercise}>
+              <Text style={styles.exerciseText}>Cooking</Text>
+              <Text style={styles.taskText}>12 Tasks</Text>
+            </View>
+          </View>
+        </ScrollView>
+        <Text style={styles.randomtext}>Ongoing Activities</Text>
+        <FlatList
+          data={activities}
+          renderItem={({ item }) => (
+            <View style={styles.activityItem}>
+              <Text style={styles.activityText}>{item.activity}</Text>
+            </View>
+          )}
+        />
       </ScrollView>
-      <Text style={styles.randomtext}>Ongoing Activities</Text>
       <StatusBar style="auto" />
-      </scrollview>
     </View>
   );
 }
@@ -103,9 +129,12 @@ const styles = StyleSheet.create({
   scrollView: {
     marginTop: 10,
   },
+  horizontalScrollView: {
+    marginTop: 10,
+  },
   exerciseContainer: {
     marginTop: 10,
-    paddingRight:15,
+    paddingRight: 15,
   },
   exercise: {
     flexDirection: 'column',
@@ -118,12 +147,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     backgroundColor: '#FFF',
-    textAlign:"left",
+    textAlign: "left",
   },
   exerciseText: {
     fontSize: 20,
     fontWeight: 'bold',
-    textAlign:"left",
+    textAlign: "left",
   },
   taskText: {
     fontSize: 16,
@@ -135,4 +164,15 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
   },
+  activityItem: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+    width:10,
+    height:5,
+  },
+  activityText: {
+    fontSize: 18,
+  },
 });
+
