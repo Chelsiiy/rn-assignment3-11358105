@@ -24,16 +24,18 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView vertical style={styles.scrollView}>
-        <Text style={styles.text}>Hello, Dev!</Text>
+        <View style={styles.header}>
+          <Text style={styles.text}>Hello, Dev!</Text>
+          <Image source={require('./assets/person.png')} style={styles.picture}/>
+        </View>
         <Text style={styles.smallText}>14 tasks today</Text>
-         <Image source={require('./assets/person.png')} style={styles.pictures}/>
         <TextInput
           style={styles.textInput}
           placeholder="Search"
         />
+         <Image source={require('./assets/orange.jpeg')} style={styles.picture}/>
         <Text style={styles.randomtext}>Categories</Text>
         <ScrollView horizontal style={styles.horizontalScrollView}>
-        
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>EXERCISE</Text>
@@ -115,13 +117,17 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingTop: 52,
   },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   text: {
-    textAlign: 'left',
     fontSize: 40,
+    flex: 1,
   },
   smallText: {
-    textAlign: 'left',
     fontSize: 20,
+    marginTop: 5,
   },
   textInput: {
     marginTop: 20,
@@ -137,14 +143,14 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   scrollView: {
-    marginTop: 10,
+    width: '100%',
   },
   horizontalScrollView: {
     marginTop: 10,
+    paddingBottom: 10,
   },
   exerciseContainer: {
-    marginTop: 10,
-    paddingRight: 15,
+    marginRight: 15,
   },
   exercise: {
     flexDirection: 'column',
@@ -157,22 +163,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     backgroundColor: '#FFF',
-    textAlign: "left",
   },
   exerciseText: {
     fontSize: 18,
     fontWeight: 'bold',
-    textAlign: "left",
+    textAlign: "center",
   },
   taskText: {
     fontSize: 12,
     color: 'black',
     marginTop: 10,
-  },
-  taskCount: {
-    fontSize: 16,
-    color: 'black',
-    textAlign: 'center',
   },
   activityItem: {
     padding: 20,
@@ -193,9 +193,9 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop: 10,
   },
-  pictures:{
-    width:50,
-    length:50,
-    position:"right",
+  picture: {
+    width: 50,
+    height: 50,
   }
 });
+
