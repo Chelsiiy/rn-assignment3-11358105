@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Image } from 'react-native';
 
 export default function App() {
   const activities = [
@@ -32,52 +32,61 @@ export default function App() {
         />
         <Text style={styles.randomtext}>Categories</Text>
         <ScrollView horizontal style={styles.horizontalScrollView}>
+        
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>EXERCISE</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+               <Image source={require('./assets/yoga.png')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>STUDY</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+                <Image source={require('./assets/study.png')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Classes</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+                <Image source={require('./assets/class.png')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
-              <Text style={styles.exerciseText}>Production</Text>
+              <Text style={styles.exerciseText}>Driving</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+                <Image source={require('./assets/driving.jpeg')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Prayer</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+                <Image source={require('./assets/prayer.jpg')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Party</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+                <Image source={require('./assets/party.png')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Sports</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+                <Image source={require('./assets/sports.jpeg')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Cooking</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
+                <Image source={require('./assets/cooking.jpg')} style={styles.LargeActivityIcon}/>
             </View>
           </View>
         </ScrollView>
@@ -150,12 +159,12 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   exerciseText: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     textAlign: "left",
   },
   taskText: {
-    fontSize: 16,
+    fontSize: 12,
     color: 'black',
     marginTop: 10,
   },
@@ -178,4 +187,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
   },
+  LargeActivityIcon:{
+    width: 50,
+    length: 50,
+  }
 });
