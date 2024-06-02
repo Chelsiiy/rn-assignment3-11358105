@@ -26,7 +26,7 @@ export default function App() {
       <ScrollView vertical style={styles.scrollView}>
         <Text style={styles.text}>Hello, Dev!</Text>
         <Text style={styles.smallText}>14 tasks today</Text>
-        
+         <Image source={require('./assets/person.png')} style={styles.pictures}/>
         <TextInput
           style={styles.textInput}
           placeholder="Search"
@@ -193,4 +193,9 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop: 10,
   },
+  pictures:{
+    width:50,
+    length:50,
+    position:"right",
+  }
 });
