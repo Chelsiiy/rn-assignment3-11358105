@@ -29,11 +29,13 @@ export default function App() {
           <Image source={require('./assets/person.png')} style={styles.picture}/>
         </View>
         <Text style={styles.smallText}>14 tasks today</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Search"
-        />
-         <Image source={require('./assets/orange.jpeg')} style={styles.picture}/>
+        <View style={styles.searchContainer}>
+          <TextInput
+            style={styles.textInput}
+            placeholder="Search"
+          />
+          <Image source={require('./assets/orange.jpeg')} style={styles.orangePicture}/>
+        </View>
         <Text style={styles.randomtext}>Categories</Text>
         <ScrollView horizontal style={styles.horizontalScrollView}>
           <View style={styles.exerciseContainer}>
@@ -129,14 +131,23 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 5,
   },
-  textInput: {
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
     marginTop: 20,
+  },
+  textInput: {
     paddingLeft: 20,
-    width: 250,
+    width: 300,
     height: 49,
     borderColor: 'black',
     borderWidth: 1,
     borderRadius: 10,
+  },
+  orangePicture: {
+    width: 50,
+    height: 50,
+    marginLeft: 10,
   },
   randomtext: {
     marginTop: 25,
@@ -197,3 +208,4 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
   }
+});
