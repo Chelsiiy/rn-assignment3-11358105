@@ -26,6 +26,7 @@ export default function App() {
       <ScrollView vertical style={styles.scrollView}>
         <Text style={styles.text}>Hello, Dev!</Text>
         <Text style={styles.smallText}>14 tasks today</Text>
+        
         <TextInput
           style={styles.textInput}
           placeholder="Search"
@@ -37,56 +38,56 @@ export default function App() {
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>EXERCISE</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-               <Image source={require('./assets/yoga.png')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/yoga.png')} style={styles.largeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>STUDY</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-                <Image source={require('./assets/study.png')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/study.png')} style={styles.largeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Classes</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-                <Image source={require('./assets/class.png')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/class.png')} style={styles.largeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Driving</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-                <Image source={require('./assets/driving.jpeg')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/driving.jpeg')} style={styles.largeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Prayer</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-                <Image source={require('./assets/prayer.jpg')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/prayer.jpg')} style={styles.largeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Party</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-                <Image source={require('./assets/party.png')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/party.png')} style={styles.largeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Sports</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-                <Image source={require('./assets/sports.jpeg')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/sports.jpeg')} style={styles.largeActivityIcon}/>
             </View>
           </View>
           <View style={styles.exerciseContainer}>
             <View style={styles.exercise}>
               <Text style={styles.exerciseText}>Cooking</Text>
               <Text style={styles.taskText}>12 Tasks</Text>
-                <Image source={require('./assets/cooking.jpg')} style={styles.LargeActivityIcon}/>
+              <Image source={require('./assets/cooking.jpg')} style={styles.largeActivityIcon}/>
             </View>
           </View>
         </ScrollView>
@@ -181,14 +182,15 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: '#FFF',
     width: 350,
-    height:90,
+    height: 90,
   },
   activityText: {
     fontSize: 20,
     textAlign: 'center',
   },
-  LargeActivityIcon:{
+  largeActivityIcon: {
     width: 50,
-    length: 50,
-  }
+    height: 50,
+    marginTop: 10,
+  },
 });
